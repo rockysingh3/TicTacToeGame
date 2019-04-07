@@ -15,6 +15,20 @@ const winCombos = [
 const cells = document.querySelectorAll('.cell');
 
 
+// let checkWin = (board, player) => {
+//     // loop through the whole board and see what postions have been played
+//     // all the squares that have been played
+//     let plays = board.reduce(((a,e,i) => (e === player)) ? a.concat(i) : a, []);
+// }
+
+// let turn = (eID, player) => {
+//     origBoard[eID] = player;
+//     document.getElementById(eID).innerHTML = player;
+//     let gameWon = checkWin(origBoard, player);
+//     if(gameWon) gameOver(gameWon);
+// }
+
+
 let turnClick = e => {
     // turn function can take the human player or AI player
     // when there is a click on the board its the human player
@@ -44,15 +58,3 @@ startGame();
 
 
 
-// let turn = (eID, player) => {
-//     origBoard[eID] = player;
-//     document.getElementById(eID).innerHTML = player;
-//     let gameWon = checkWin(origBoard, player);
-//     if(gameWon) gameOver(gameWon);
-// }
-
-// let checkWin = (board, player) => {
-//     // loop through the whole board and see what postions have been played
-//     // all the squares that have been played
-//     let plays = board.reduce(((a,e,i) => (e === player)) ? a.concat(i) : a, []);
-// }
