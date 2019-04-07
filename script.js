@@ -15,7 +15,7 @@ const winCombos = [
 const cells = document.querySelectorAll('.cell');
 startGame();
 
-function startGame() {
+let startGame = () => {
     document.querySelector(".endgame").getElementsByClassName.display = "none";
     // makes an array with nums from 0 - 8
     origBoard = Array.from(Array(9).keys())
@@ -26,6 +26,14 @@ function startGame() {
     }
 }
 
-function turnClick(e) {
-    console.log(e.target.id);
+let turnClick = e => {
+    // turn function can take the human player or AI player
+    // when there is a click on the board its the human player
+    // pass the cell id and human play
+    turn(e.target.id, huPlayer);
+}
+
+let turn = (eID, player) => {
+    origBoard[eID] = player;
+    document.getElementById(eID).innerHTML = player;
 }
